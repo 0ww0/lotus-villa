@@ -1,0 +1,16 @@
+//- index.pug
+extends templates/default.pug
+
+block active
+	- var selected = 'Book'
+
+block prepend title
+	- var title = 'Book Your Stay'
+		
+block stylesheet
+	link(rel="stylesheet",  href="assets/css/partials/book.css")
+
+block content
+	include templates/partial/book.pug
+ 
+block javascript

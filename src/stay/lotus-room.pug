@@ -1,0 +1,20 @@
+//- index.pug
+extends ../templates/fdefault.pug
+
+block active
+	- var selected = 'Stay'
+
+block prepend title
+	- var title = 'Lotus Room'
+    
+block stylesheet
+	link(rel="stylesheet",  href="../assets/css/partials/stay.css")
+	link(rel="stylesheet",  href="../assets/css/partials/cross-sell.css")
+block content
+	include ../templates/partial/stay/lotus.pug
+	include ../templates/component/_cross-sell.pug
+ 
+block javascript
+	script(src='../assets/js/external_plugin/bs.datepicker.js')
+	script(src='../assets/js/external_plugin/slick-lightbox.js')
+	script(src='../assets/js/stay/stay.js')

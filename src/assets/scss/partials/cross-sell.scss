@@ -1,0 +1,132 @@
+@import 'globals/vars';
+
+
+.cross-sell-container{
+	width: 100%;
+	padding: 0;
+	border: 0;
+	background-color: $bg-contain;
+	.cross-sell-wrapper{
+		margin: 0 auto;
+		padding: 4% 6% 10%;
+	}
+	@media (max-width: 375px) {
+		.cross-sell-wrapper{
+			padding: 4% 6% 15%;
+		}
+	}
+	@media(min-width: 750px){
+		.columns-fix.six-half{
+			width: 50%;
+		}
+	}
+	@media (min-width: 1000px) {
+		.cross-sell-wrapper{
+			width: 880px;
+			height: 100%;
+			padding: 3% 6% 4%;
+		}
+	}
+	@media (min-width: 1200px) {
+		.cross-sell-wrapper{
+			width: 1056px;
+			height: 100%;
+		}
+	}
+	@media (min-width: 1600px) {
+		.cross-sell-wrapper{
+			padding: 1.5% 6%;
+		}
+	}
+	.cross-sell-content{
+		padding: 4% 0 0;
+		position: relative;
+		.cross-content{
+			position: relative;
+			width: 100%;
+			height: 100%;
+			&:after{
+				content: '';
+				background-color: #000;
+				display: block;
+				width: 100%;
+				height: 100%;
+				top: 0%;
+				opacity: 0.2;
+				position: absolute;
+				transition: opacity 0.5s ease-out;
+			}
+			&:hover:after{
+				opacity: 0;
+				transition: opacity 0.5s ease-in;
+			}
+		}
+	}
+
+	@media(min-width: 750px){
+		.cross-sell-content{
+			padding: 4%;
+		}
+	}
+	.img-bg-holder{
+		text-align: center;
+		height: auto;
+	}
+	.cross-img-holder{
+		position: relative;
+		width: 100%;
+		height: 200px;
+		margin: 0 auto;
+
+
+		img{
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+	}
+	@media (min-width: 1200px) {
+		.cross-img-holder{
+			height: 250px;
+		}
+	}
+	.cross-desc{
+		position: absolute;
+		top: 38%;
+		width: 100%;
+		span{
+			font-size: 34px;
+			color: $white;
+		}
+	}
+	@media(max-width: 375px){
+		.cross-desc{
+			width: 88%;
+			padding: 0 6%;
+		}
+		.discover-luang-prabang{
+			.cross-desc{
+				top: 27%;
+			}
+		}
+	}
+	@media(min-width: 750px){
+		.cross-desc{
+			span{
+				font-size: 28px;
+			}
+		}
+	}
+	@media(min-width: 1000px){
+		.cross-desc{
+			span{
+				font-size: 34px;
+			}
+		}
+	}
+	@media(min-width: 1200px){
+		.cross-desc{
+			top: 40%;
+		}
+	}
+}

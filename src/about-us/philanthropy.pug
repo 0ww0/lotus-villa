@@ -1,0 +1,16 @@
+//- index.pug
+extends ../templates/fdefault.pug
+
+block active
+	- var selected = 'About Us'
+
+block prepend title
+	- var title = 'Philanthropy' 
+    
+block stylesheet
+	link(rel="stylesheet",  href="../assets/css/partials/about-us/philanthropy.css")
+block content
+	include ../templates/partial/about-us/phil.pug
+ 
+block javascript
+	script(src='../assets/js/about-us/philanthropy.js')

@@ -1,0 +1,454 @@
+@import 'globals/vars';
+
+//NOTE Carousel container
+
+.carousel-container{
+	.carousel-wrapper{
+		height: auto;
+		background-size: cover;
+		&:before{
+			content: '';
+			padding-top: 55%;
+			display: table;
+		}
+	}
+	@media (max-width: 999px){
+		.img-bg-parallax{
+			background-position: center !important;
+		}
+	}
+	@media (min-width: 1000px) {
+		.carousel-wrapper{
+			height: auto;
+			background-attachment: fixed;
+			background-size: 1920px 500px;
+			background-position: 50% 80px;
+			&:before{
+				padding-top: 500px;
+			}
+		}
+	}
+
+
+	.hero-header{
+		background-color: $bg-text;
+		color: $white;
+		padding: 4% 6%;
+		opacity: 0.85;
+		.content-title{
+			margin-bottom: 5px;
+		}
+		.content-desc{
+			margin-bottom: 5px;
+		}
+	}
+
+	@media (min-width: 1000px) {
+		.hero-header{
+			background-color: transparent;
+			padding: 0%;
+			.content-desc{
+				margin-bottom: 30px;
+			}
+			&.hero-wrapper{
+				position: absolute;
+				top: 30%;
+				width: 100%;
+			}
+		}
+	}
+}
+
+//NOTE Subscripe container
+
+.subscribe-container{
+	font-family: $font_garamond;
+	.subscribe-wrapper{
+		position: relative;
+		display: block;
+		border-top: 1px transparent solid;
+	}
+	@media (min-width: 1000px){
+		.subscribe-wrapper{
+			border-top: 0;
+		}
+	}
+	.subscribe-desc{
+		background-color: $bg-text;
+		height: auto;
+		a{
+			font-size: 20px;
+			line-height: 1.2;
+			color: $white;
+			display: block;
+			padding: 45px 0;
+		}
+		@media(min-width: 1000px){
+			a{
+				padding: 60px 0;
+			}
+		}
+	}
+
+	.tripadvisor-image{
+		background-color: $white;
+		padding: 23px 0;
+		.trip-img-holder{
+			padding: 0 10px;
+			img{
+				background-size: 100% auto;
+				background: center no-repeat;
+			}
+			&.trip-01{
+				img{
+					width: 110px;
+					height: 86px;
+				}
+			}
+			&.trip-02{
+				img{
+					width: 174px;
+					height: 86px;
+				}
+			}
+			&.trip-03{
+				img{
+					width: 220px;
+					height: 86px;
+				}
+			}
+		}
+	}
+	@media(min-width: 1000px){
+		.tripadvisor-image{
+			width: 650px;
+			margin: 0 auto;
+			padding: 26px 0;
+		}
+	}
+	@media(min-width: 1200px){
+		.tripadvisor-image{
+			width: 750px;
+			margin: 0 auto;
+		}
+	}
+	@media(min-width: 1400px){
+		.tripadvisor-image{
+			width: 800px;
+			margin: 0 auto;
+		}
+	}
+	@media(min-width: 1600px){
+		.tripadvisor-image{
+			width: 1000px;
+			margin: 0 auto;
+		}
+	}
+}
+
+
+//NOTE Philanthropy Container
+
+.philanthropy-container{
+	.philanthropy-wrapper{
+		position: relative;
+		display: block;
+		background-color: #dbdad6;
+		padding: 0;
+	}
+	.phil-bg-holder{
+		background-image: url(../../images/contents/pages/landing/philanthropy/bg.jpg);
+		height: auto;
+		background-position: 70% 50%;
+		&:before{
+			content: '';
+			padding-top: 50%;
+			display: table;
+		}
+	}
+	@media (min-width: 750px){
+		.phil-bg-holder{
+			background-position: 65% 50%;
+			&:before{
+				content: '';
+				padding-top: 500px;
+			}
+		}
+	}
+	@media (min-width: 1000px){
+		.phil-bg-holder{
+			height: auto;
+			background-size: cover;
+			background-position: center;
+		}
+	}
+	.phil-desc{
+		padding: 6% 6% 2%;
+	}
+	@media (min-width: 1000px) {
+		.phil-desc{
+			padding: 2% 4%;
+			position: absolute;
+    		top: 28%;
+			width: 475px;
+		}
+	}
+	@media (min-width: 1200px) {
+		.phil-desc{
+			padding: 0 10%;
+		}
+	}
+}
+
+
+
+
+//NOTE About Us
+
+.about-us-container{
+	.about-us-wrapper{
+		position: relative;
+		display: block;
+		background-color: #2c353f;
+	}
+
+	.about-us-bg-holder{
+		background-image: url(../../images/contents/pages/landing/about-us/bg.jpg);
+		height: auto;
+		padding: 6% 0 4%;
+		background-position: left;
+	}
+	@media(min-width: 1000px){
+		.about-us-bg-holder{
+
+			padding: 8% 0;
+		}
+	}
+	.about-us-desc{
+		padding: 0 6%;
+		span{
+			color: $white;
+		}
+		.content-title{
+			span{
+				display: block;
+				word-wrap: break-word;
+				width: 90%;
+				text-transform: capitalize;
+			}
+		}
+		.content-calibre-light{
+			margin-bottom: 15px;
+		}
+	}
+	@media (min-width: 1000px){
+		.about-us-desc{
+			width: auto;
+			margin: 0 auto;
+		}
+		.content-title{
+			span{
+				width: 75%;
+			}
+		}
+	}
+	@media (min-width: 1200px){
+		.about-us-desc{
+			margin: 0 auto;
+			padding: 0 10%;
+		}
+	}
+}
+
+//NOTE - Stay With Us Container
+
+.stay-with-us-container{
+	background-color: $bg-contain;
+	padding-top: 0;
+	.stay-desc{
+		padding: 40px 0 20px;
+	}
+	.stay-wrapper{
+		padding: 0 6%;
+		&:last-child{
+			padding-bottom: 60px;
+		}
+	}
+}
+@media (min-width: 1000px){
+	.stay-with-us-container{
+		padding-top: 10px;
+		.stay-wrapper{
+			.columns:nth-child(3){
+				margin-left: 0;
+			}
+		}
+	}
+}
+@media (min-width: 1400px){
+	.stay-with-us-container{
+		.stay-wrapper{
+			.columns{
+				margin-left: 2%;
+			}
+			.columns:nth-child(1){
+				margin-left: 0;
+			}
+			.columns:nth-child(3){
+				margin-left: 2%;
+			}
+			.six.columns{
+				width: 23.5%;
+			}
+		}
+	}
+}
+
+//NOTE - ROOM
+
+
+.room-container{
+	position: relative;
+	padding: 20px 0;
+	.room-img-holder{
+		position: relative;
+		height: auto;
+		img{
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+		.btn{
+			position: absolute;
+			top: 43%;
+			left: 30%;
+			line-height: 1.2;
+		}
+		@media(max-width: 320px){
+			.btn{
+				left: 25%;
+			}
+		}
+		@media(min-width: 550px){
+			.btn{
+				left: 35%;
+			}
+		}
+		@media(min-width: 750px){
+			.btn{
+				left: 38%;
+			}
+		}
+		@media(min-width: 1400px){
+			.btn{
+				top: 34%;
+				left: 26%;
+			}
+		}
+		@media(min-width: 1600px){
+			.btn{
+				top: 36%;
+				left: 30%;
+			}
+		}
+		@media(min-width: 1800px){
+			.btn{
+				top: 36%;
+				left: 34%;
+			}
+		}
+	}
+	.room-bg-holder{
+		height: 155px;
+		background-color: $white;
+		width: 100%;
+		height: 100%;
+		background-size: contain;
+		background-position: right;
+	}
+	&.lotus-room{
+		.room-bg-holder{
+			background-image:url(../../images/contents/pages/landing/banners-rooms/texture/01-lotus.png);
+
+		}
+	}
+	&.frangipani-room{
+		.room-bg-holder{
+			background-image:url(../../images/contents/pages/landing/banners-rooms/texture/02-frangipani.png);
+		}
+	}
+	&.waterlily-room{
+		.room-bg-holder{
+			background-image:url(../../images/contents/pages/landing/banners-rooms/texture/03-waterlily.png);
+		}
+	}
+	&.orchid-room{
+		.room-bg-holder{
+			background-image:url(../../images/contents/pages/landing/banners-rooms/texture/04-orchid.png);
+		}
+	}
+	.room-desc{
+		padding: 7% 6%;
+		.room-title{
+			margin-bottom: 5px;
+			span{
+				font-family: $font_garamond;
+				font-size: 24px;
+				color: $black;
+			}
+		}
+		span{
+			font-family: $font_calibri;
+			font-size: 16px;
+			line-height: 1;
+			color: #666666;
+			font-weight: 300;
+		}
+	}
+	@media(min-width: 550px){
+		.room-desc{
+			padding: 5% 6%;
+		}
+	}
+	@media(min-width: 750px){
+		.room-desc{
+			padding: 3.5% 6%;
+		}
+	}
+	@media (min-width: 1000px) {
+		.room-desc{
+			padding: 5.3% 6%;
+			.room-title{
+				margin-bottom: 10px;
+				span{
+					font-family: $font_garamond;
+					font-size: 28px;
+					color: $black;
+				}
+			}
+			span{
+				font-family: $font_calibri;
+				font-size: 18px;
+				line-height: 1;
+				color: #666666;
+				font-weight: 300;
+			}
+		}
+	}
+	@media (min-width: 1200px) {
+		.room-desc{
+			padding: 4% 6%;
+		}
+	}
+
+	@media (min-width: 1400px) {
+		.room-desc{
+			padding: 3.8% 6%;
+		}
+	}
+	@media (min-width: 1600px) {
+		.room-desc{
+			padding: 3% 6%;
+		}
+	}
+}

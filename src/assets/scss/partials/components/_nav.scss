@@ -1,0 +1,143 @@
+.tabs-holder{
+    ul.tabs{
+        margin-bottom: 0;
+        li.tabs-list{
+            display: none;
+            width: 22%;
+            float: left;
+            a.tabs-navi{
+                max-width: 100%;
+                color: $white;
+                width: 100%;
+                text-align: center;
+                display: block;
+                vertical-align: top;
+                padding: 12px 0;
+                font-weight: bold;
+            }
+            &.active{
+                width: 54%;
+                border: 2px $white solid;
+                &:first-child {
+                    margin-left: 22%;
+                }
+            }
+            &.active,
+            &.prev,
+            &.next {
+              display: block;
+            }
+            &.prev,
+            &.next {
+              -webkit-transform: scale(0.9);
+              transform: scale(0.9);
+            }
+            &.next > a,
+            &.prev > a {
+              -webkit-transition: none;
+              transition: none;
+              .text {
+                display: none;
+              }
+              &:after,
+              &:after {
+                  position: relative;
+                  top: 1px;
+                  display: inline-block;
+              }
+            }
+            &.prev > a:after {
+                content: "\e904";
+                font-family: 'lotus-font' !important;
+            }
+            &.next > a:after {
+                content: "\e905";
+                font-family: 'lotus-font' !important;
+            }
+        }
+    }
+}
+
+@media (min-width: 750px){
+    .tabs-holder{
+        ul.tabs{
+            li.tabs-list{
+                display: block;
+                width: 24%;
+                float: left;
+                border: 2px transparent solid;
+                transition: border 0.6s ease-out;
+                a.tabs-navi{
+                    max-width: 100%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    word-wrap: normal;
+                    color: $white;
+                    width: 100%;
+                    text-align: center;
+                    vertical-align: top;
+                    display: block;
+                    padding: 12px 0;
+                    font-weight: bold;
+                }
+                &.active{
+                    width: 24%;
+                    border: 2px $white solid;
+                    transition: border 0.6s ease-in;
+                    &:first-child {
+                        margin-left: 0%;
+                    }
+                }
+                &:hover{
+                    border: 2px $white solid;
+                }
+                &.active,
+                &.prev,
+                &.next {
+                  display: block;
+                }
+                &.prev,
+                &.next {
+                  -webkit-transform: scale(1);
+                  transform: scale(1);
+                }
+                &.next > a,
+                &.prev > a {
+                  -webkit-transition: none;
+                  transition: none;
+                  .text {
+                    display: block;
+                  }
+                  &:after,
+                  &:after {
+                      position: relative;
+                      top: 1px;
+                      display: none;
+                  }
+                }
+                &.prev > a:after {
+                    content: "";
+                }
+                &.next > a:after {
+                    content: "";
+                }
+            }
+        }
+    }
+}
+.tabs-container {
+    .fade.in {
+        opacity: 1;
+    }
+    .fade {
+        opacity: 0;
+        transition: opacity .15s linear;
+    }
+    .tabs-content-wrapper{
+        display: none;
+        &.active{
+            display: block;
+        }
+    }
+}

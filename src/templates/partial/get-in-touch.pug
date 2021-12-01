@@ -1,0 +1,79 @@
+- assetImage = 'assets/images/contents/pages/'
+
+
+
+	.section.container.get-in-touch-container
+		.img-bg-parallax.get-in-touch-bg-holder(style='background-image: url(assets/images/contents/pages/get-in-touch/banners/page-banner.jpg)')
+			
+		.hero-header.hero-wrapper.txt-center
+			.content-title
+				span Get in Touch
+			.content-desc
+				span Have a question? We are more than happy to help
+				
+	.section.container.get-form-location-container
+		.get-touch-wrapper
+			.row-table
+				.columns-table
+					.location-holder
+						.info-container
+							.info-wrapper.info-phone
+								.info-holder.icon
+									i.ico.icon-phone.vertical-middle
+								.info-holder.cont
+									span.block Telephone:
+									a.tel(href='tel:+856 71-255050') +856 71-255050
+							.info-wrapper.info-email
+								.info-holder.icon
+									i.ico.icon-email.vertical-middle
+								.info-holder.cont
+									span.block Email:
+									a.link-gold(href='mailto:reception@lotusvillalaos.com') reception@lotusvillalaos.com
+						.maps-container
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.6807547168974!2d102.13836231536996!3d19.895697930863466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x312f2a6b010a5541%3A0xce0fc9b992325c37!2sLotus+Villa+Boutique+Hotel+Luang+Prabang!5e0!3m2!1sen!2sus!4v1508380793544" width="600" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+				.columns-table
+					.forms-holder
+						.content-title
+							span Drop Us A Line
+						.form-container
+							form.contact-form#js-contact-form(novalidate = 'novalidate')
+								.row
+									.columns.six
+										.form-group.show-error-wrapper
+											label(for='contact_first_name') First Name*
+											input(type='text' class='form-control' name='first-name' id='contact_first_name' placeholder='e.g. John')
+									.columns.six
+										.form-group.show-error-wrapper
+											label(for='contact_last_name') Last Name*
+											input(type='text' class='form-control' name='last-name' id='contact_last_name' placeholder='e.g. Doe')
+								.row
+									.columns.six
+										.form-group.show-error-wrapper
+											label(for='contact_email') Email*
+											input(type='email' class='form-control' name='email' id='contact_email' placeholder='e.g. john.smith@email.com')
+									.columns.six
+										.form-group.show-error-wrapper
+											label(for='contact_phone') Phone*
+											input(type='text' class='form-control' name='phone' id='contact_phone' placeholder='e.g. eg. +60125557878')
+								.row
+									.colums.twelve
+										.form-group.show-error-wrapper
+											label(for='contact_subject') Subject*
+											select(class='form-control' name='subject' id='contact-subject' )
+												option(value='' disabled='disabled' selected='selected') Please select a subject
+												option(value='Feedback') Feedback
+								.row
+									.colums.twelve
+										.form-group.show-error-wrapper
+											label(for='contact_how_help') How can we help you?
+											textarea(class='form-control' row='5' id='contact_how_help' name='contact-how-help')
+								.row
+									.colums.twelve
+										.form-group
+											.help-block
+												span * Indicates a required field
+								.row
+									.colums.twelve
+										.btn-holder
+											input.btn.btn-gold(type='submit' value='submit')
+												

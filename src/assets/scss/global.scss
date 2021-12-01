@@ -1,0 +1,38 @@
+/*-----------------------------------------------------------------------------
+    Imports
+-----------------------------------------------------------------------------*/
+@import 'partials/imports/fonts';
+@import 'partials/imports/normalize';
+@import 'partials/imports/skeleton';
+
+
+/*-----------------------------------------------------------------------------
+    External Plugin
+-----------------------------------------------------------------------------*/
+@import 'partials/external/slick';
+@import 'partials/external/slick-lightbox';
+@import 'partials/external/bs-datepicker';
+@import 'partials/external/bs-datepicker.standalone';
+
+/*-----------------------------------------------------------------------------
+    Global
+-----------------------------------------------------------------------------*/
+@import 'partials/globals/vars';
+
+
+
+
+
+/*-----------------------------------------------------------------------------
+    Components
+-----------------------------------------------------------------------------*/
+@import 'partials/components/carousels';
+@import 'partials/components/nav';
+
+
+/*-----------------------------------------------------------------------------
+    Main
+-----------------------------------------------------------------------------*/
+@import 'partials/main/header';
+@import 'partials/main/footer';
+@import 'partials/main/general';

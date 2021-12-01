@@ -1,0 +1,261 @@
+footer{
+	&.site-footer{
+		position: relative;
+		background-color: $white;
+		border-top: 1px #dddddd solid;
+	}
+	// Back To Top
+
+	.back-to-top{
+		position: absolute;
+		display: block;
+		background-color: $gold;
+		width: 50px;
+		height: 50px;
+		right: 6%;
+		top: -3%;
+		z-index: 20;
+		span.ico{
+			display: block;
+			color: $white;
+			padding: 35% 0;
+			font-size: 16px;
+			text-align: center;
+		}
+	}
+
+
+	@media (min-width: 1000px) {
+		.back-to-top{
+			right: 2.2%;
+			top: -8%;
+		}
+	}
+	@media (min-width: 1200px) {
+		.back-to-top{
+			right: 1.8%;
+			top: -8%;
+		}
+	}
+
+	@media (min-width: 1400px) {
+		.back-to-top{
+			right: 6.6%;
+			top: -8%;
+		}
+	}
+
+	@media (min-width: 1600px) {
+		.back-to-top{
+			right: 6.2%;
+			top: -8%;
+		}
+	}
+
+	// Back To Top
+
+	.footer-height{
+		position: relative;
+		min-height: 300px;
+		border-top: 1px solid transparent;
+	}
+	.meta-container{
+		position: relative;
+		padding: 20px 6%;
+	}
+
+	@media(min-width: 1000px){
+		.meta-container{
+			padding: 40px 4% 20px;
+		}
+	}
+
+	@media(min-width: 1400px){
+		.meta-container{
+			padding: 40px 6% 20px;
+		}
+	}
+	@media(min-width: 1600px){
+		.meta-container{
+			padding: 40px 3% 20px;
+		}
+	}
+
+
+	.navigation{
+		margin: 0;
+		ul.menu{
+			width: 100%;
+			list-style: none;
+			text-align: center;
+			margin: 0;
+			li.menu-list{
+				a.menu-link{
+					font-size: 18px;
+				}
+			}
+		}
+	}
+
+	@media(min-width: 1000px){
+		.navigation{
+			padding-left: 8%;
+			ul.menu{
+				text-align: left;
+			}
+		}
+	}
+
+	@media(min-width: 1200px){
+		.navigation{
+			padding-left: 12%;
+		}
+	}
+
+
+	.contact{
+		.location{
+			text-align: center;
+			span{
+				font-family: $font_garamond;
+				color: $black;
+			}
+
+			&.address{
+				padding-bottom: 10px;
+			}
+			&.email{
+
+			}
+			&.phone{
+
+			}
+		}
+	}
+
+	@media(min-width: 1000px){
+		.contact{
+			.location{
+				text-align: left;
+				&.address{
+					padding-bottom: 27px;
+				}
+			}
+		}
+	}
+
+	.socmed{
+		.media{
+			text-align: center;
+			&.sub-forms{
+				form.subscribe-form{
+					position: relative;
+					margin-bottom: 0;
+					@media(max-width: 400px){
+						width: 100%;
+					}
+					width: 60%;
+    				margin: 0 auto;
+					input[type='email']{
+						font-family: $font_garamond;
+						position: relative;
+						border-radius: 0;
+						margin-bottom: 0;
+						width: 100%;
+						padding: 6px 70px 6px 10px;
+					}
+					.subscribe-submit{
+						position: absolute;
+						top: 0;
+						right: 0;
+	 				   	width: 60px;
+    					padding: 6px;
+						text-align: right;
+						span.ico{
+							font-size: 12px;
+							color: $gold;
+							padding: 0 15%;
+						}
+					}
+				}
+			}
+			&.social-icon{
+				padding: 20px;
+				a.icon-holder{
+					padding: 0 10px;
+					span.ico{
+						font-size: 24px;
+						color: #8a8a8a;
+						opacity: 0.5;
+					}
+					&:hover,&:active{
+						span.ico{
+							opacity: 1;
+						}
+					}
+				}
+			}
+			&.copyright{
+				padding: 20px 0;
+				ul.copy{
+					list-style: none;
+					li{
+						display: inline-block;
+					}
+				}
+				span{
+					color: #797979;
+					font-size: 15px;
+				}
+				.disclaimer{
+					display: block;
+				}
+			}
+		}
+	}
+
+	@media (min-width: 1000px) {
+
+		.socmed{
+			.media{
+				text-align: right;
+				&.sub-forms{
+					form.subscribe-form{
+						margin-bottom: 0;
+						width: 100%;
+						input[type='email']{
+							width: 75%;
+						}
+						.subscribe-submit{
+
+						}
+					}
+				}
+				&.social-icon{
+					padding: 10px 0;
+					a.icon-holder{
+						padding: 0 0 0 18px;
+					}
+				}
+				&.copyright{
+					padding: 125px 0 0;
+					span{
+						color: #797979;
+						font-size: 15px;
+						&:after{
+							content: '|';
+							padding: 0 5px;
+							color: $black;
+						}
+					}
+					.disclaimer{
+						font-family: $font_calibri;
+						font-size: 15px;
+						display: inline-block;
+					}
+				}
+			}
+		}
+
+	}
+}

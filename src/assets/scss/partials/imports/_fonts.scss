@@ -1,0 +1,217 @@
+/*--------------------------------------
+  Fonts
+--------------------------------------*/
+
+@font-face {
+    font-family: 'garamond';
+    src: url('../fonts/garamond/GaramondRegular.eot');
+    src: url('../fonts/garamond/GaramondRegular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/garamond/GaramondRegular.woff2') format('woff2'),
+        url('../fonts/garamond/GaramondRegular.woff') format('woff'),
+        url('../fonts/garamond/GaramondRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'garamond';
+    src: url('../fonts/garamond/GaramondLight.eot');
+    src: url('../fonts/garamond/GaramondLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/garamond/GaramondLight.woff2') format('woff2'),
+        url('../fonts/garamond/GaramondLight.woff') format('woff'),
+        url('../fonts/garamond/GaramondLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Calibri';
+    src: url('../fonts/calibri/Calibri.eot');
+    src: url('../fonts/calibri/Calibri.eot#iefix') format('embedded-opentype'),
+         url('../fonts/calibri/Calibri.woff2') format('woff2'),
+         url('../fonts/calibri/Calibri.woff') format('woff'),
+         url('../fonts/calibri/Calibri.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Calibri';
+    src: url('../fonts/calibri/Calibri-Light.eot');
+    src: url('../fonts/calibri/Calibri-Light.eot#iefix') format('embedded-opentype'),
+         url('../fonts/calibri/Calibri-Light.woff2') format('woff2'),
+         url('../fonts/calibri/Calibri-Light.woff') format('woff'),
+         url('../fonts/calibri/Calibri-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('../fonts/calibri/Calibri-Bold.eot');
+    src: url('../fonts/calibri/Calibri-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/calibri/Calibri-Bold.woff2') format('woff2'),
+        url('../fonts/calibri/Calibri-Bold.woff') format('woff'),
+        url('../fonts/calibri/Calibri-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+/*--------------------------------------
+  Lotus Icon Font
+--------------------------------------*/
+
+
+@font-face {
+  font-family: 'lotus-font';
+  src:  url('../fonts/icon/lotus-font.eot');
+  src:  url('../fonts/icon/lotus-font.eot#iefix') format('embedded-opentype'),
+    url('../fonts/icon/lotus-font.ttf') format('truetype'),
+    url('../fonts/icon/lotus-font.woff') format('woff'),
+    url('../fonts/icon/lotus-font.svg#lotus-font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'lotus-font' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-dressing-table:before {
+  content: "\e918";
+}
+.icon-cavet-up:before {
+  content: "\e902";
+}
+.icon-hamburger-cross:before {
+  content: "\e901";
+}
+.icon-cavet-left:before {
+  content: "\e904";
+}
+.icon-cavet-right:before {
+  content: "\e905";
+}
+.icon-arrow-right:before {
+  content: "\e907";
+}
+.icon-bullet-full:before {
+  content: "\e908";
+}
+.icon-bullet-hallow:before {
+  content: "\e909";
+}
+.icon-bullet-small-full:before {
+  content: "\e90a";
+}
+.icon-bullet-small-hallow:before {
+  content: "\e90b";
+}
+.icon-bullet-small-target:before {
+  content: "\e90c";
+}
+.icon-lotus:before {
+  content: "\e90d";
+}
+.icon-balcony:before {
+  content: "\e90e";
+}
+.icon-guest-two:before {
+  content: "\e90f";
+}
+.icon-guest-three:before {
+  content: "\e910";
+}
+.icon-guest-four:before {
+  content: "\e911";
+}
+.icon-bathtub:before {
+  content: "\e912";
+}
+.icon-bed-join:before {
+  content: "\e913";
+}
+.icon-bed-master:before {
+  content: "\e914";
+}
+.icon-bed-single:before {
+  content: "\e915";
+}
+.icon-calendar:before {
+  content: "\e916";
+}
+.icon-coffee-machine:before {
+  content: "\e917";
+}
+.icon-furniture:before {
+  content: "\e919";
+}
+.icon-living-space:before {
+  content: "\e91a";
+}
+.icon-lounge:before {
+  content: "\e91b";
+}
+.icon-minibar:before {
+  content: "\e91c";
+}
+.icon-shower:before {
+  content: "\e91d";
+}
+.icon-up-down:before {
+  content: "\e91e";
+}
+.icon-wifi:before {
+  content: "\e91f";
+}
+.icon-windows:before {
+  content: "\e920";
+}
+.icon-ac:before {
+  content: "\e921";
+}
+.icon-phone:before {
+  content: "\e922";
+}
+.icon-email:before {
+  content: "\e923";
+}
+.icon-pin:before {
+  content: "\e924";
+}
+.icon-twitter:before {
+  content: "\e925";
+}
+.icon-fb:before {
+  content: "\e926";
+}
+.icon-ig:before {
+  content: "\e92a";
+}
+.icon-search:before {
+  content: "\e986";
+}
+.icon-menu:before {
+  content: "\e900";
+}
+.icon-plus:before {
+  content: "\ea0a";
+}
+.icon-minus:before {
+  content: "\ea0b";
+}
+.icon-play3:before {
+  content: "\ea1c";
+}

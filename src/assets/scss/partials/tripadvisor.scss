@@ -1,0 +1,167 @@
+@import 'globals/vars';
+
+
+	//NOTE Tripadvisor - _tripadvisor.pug
+	.tripadvisor-container{
+		width: 100%;
+		padding: 0;
+		border: 0;
+		.tripadvisor-wrapper{
+			position: relative;
+			background-color: $white;
+		}
+		.trip-img-holder{
+			background-size: cover;
+		}
+		.trip-desc{
+			padding: 0 10%;
+			.content-title{
+				span{
+					line-height: 1.6;
+				}
+			}
+		}
+		.tripdavisor-container{
+			display: table-row;
+			vertical-align: middle;
+			width: 100%;
+			.trip-icon-holder{
+				display: block;
+				padding: 4% 6% 0;
+			}
+		}
+	}
+	@media(min-width: 750px){
+		.tripadvisor-container{
+			.trip-img-holder{
+				background-position: top;
+			}
+			.trip-desc{
+				padding: 0 20%;
+			}
+		}
+	}
+	@media(min-width: 1000px){
+		.tripadvisor-container{
+			width: 100%;
+			padding: 0;
+			border: 0;
+			height: 100%;
+			display: table;
+			table-layout: fixed;
+			.tripadvisor-wrapper{
+				position: relative;
+				background-color: $white;
+				display: table-row;
+			}
+			.trip-img-holder{
+				height: 100%;
+				background-size: cover;
+			}
+			.trip-desc{
+				padding: 0 10%;
+				.content-title{
+					span{
+						line-height: 1.6;
+					}
+				}
+			}
+			.tripdavisor-container{
+				display: table-cell;
+				height: 100%;
+				vertical-align: middle;
+				width: 50%;
+				.trip-icon-holder{
+					display: block;
+					padding: 5% 6% 0;
+				}
+			}
+		}
+	}
+	@media(min-width: 1400px){
+		.tripadvisor-container{
+			.trip-img-holder{
+				background-position: top;
+			}
+			.trip-desc{
+				padding: 0 22%;
+			}
+		}
+	}
+
+
+	.carousel_hdr {
+    	overflow: hidden;
+    	position: relative;
+    	cursor: default;
+    	width: auto;
+    	display: table;
+    	table-layout: fixed;
+    	width: 100%;
+	}
+	//NOTE Tripadvisor - _trip-carousel.pug
+
+	.trip-comment-wrapper{
+		display: block;
+		padding: 1.5% 6% 10%;
+		height: auto;
+		@media (max-width: 360px) {
+			padding: 1.5% 6% 20%;
+		}
+		@media (min-width: 1000px) {
+			padding: 1.5% 6% 10%;
+			min-height: 450px;
+			.content-desc{
+				margin-bottom: 0;
+			}
+		}
+		.trip-comment-desc{
+			.content-title{
+				margin-bottom: 15px;
+				span{
+					&:before{
+						content:'“';
+					}
+					&:after{
+						content:'”';
+					}
+				}
+			}
+			.content-desc{
+				padding: 12px 0;
+				margin-bottom: 40px;
+				span{
+					display: block;
+					padding: 10px 0;
+					font-size: 18px;
+					line-height: 1.2;
+					font-weight: 500;
+				}
+			}
+		}
+		.rating-date-holder{
+			padding-left: 1%;
+			.rating-star{
+				position: relative;
+				display: inline-block;
+				.ico{
+					padding: 0 4px;
+					font-size: 18px;
+					color: #8a6b37;
+				}
+			}
+			.rating-date{
+				display: inline-block;
+				line-height: 1.2;
+				color: #666666;
+				padding: 0 5px;
+			}
+		}
+		.comment-wrapper{
+			padding: 20px 2%;
+			height: auto;
+			span{
+				margin-bottom: 10px;
+			}
+		}
+	}

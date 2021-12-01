@@ -1,0 +1,16 @@
+//- index.pug
+extends templates/default.pug
+
+block active
+	- var selected = 'Book'
+
+block prepend title
+	- var title = 'Manage Your Booking'
+		
+block stylesheet
+	link(rel="stylesheet",  href="assets/css/partials/book.css")
+
+block content
+	include templates/partial/review.pug
+ 
+block javascript

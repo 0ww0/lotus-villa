@@ -1,0 +1,418 @@
+@import 'partials/globals/vars';
+
+body{
+	font-family: $font_calibri;
+	font-size: 16px;
+	color: $black;
+	line-height: 1.4;
+}
+
+header{
+	position: relative;
+	display: block;
+}
+
+section{
+	width: 100%;
+	border: 0;
+}
+
+main{
+	position: relative;
+	padding-top: 80px;
+}
+
+footer{
+	position: relative;
+	display: block;
+}
+
+.clearfix{
+	&:before,&:after{
+		display: table;
+		clear: both;
+		content: '';
+	}
+}
+
+.container{
+	&.container-fluid{
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&.container-fixed{}
+
+}
+
+.sr-only{
+	font-size: 0;
+	display: none;
+}
+
+.noscroll{
+	overflow: hidden;
+	@media(min-width: 1000px){
+		padding-right: 16px;
+	}
+}
+
+.block{
+	display: block;
+}
+
+.inline-block{
+	display: inline-block;
+}
+
+.pull-right{
+	float: right;
+	&:before,&:after{
+		display: table;
+		clear: both;
+		content: '';
+	}
+}
+
+.pull-left{
+	float: left;
+	&:before,&:after{
+		display: table;
+		clear: both;
+		content: '';
+	}
+}
+
+.rm-margin{
+	margin: 0;
+}
+
+.rm-margin-left{
+	margin-left: 0;
+}
+
+.txt-center{
+	text-align: center;
+}
+
+.txt-left{
+	text-align: left;
+}
+
+.txt-right{
+	text-align: right;
+}
+
+.txt-uppercase{
+	text-transform: uppercase;
+}
+
+.txt-capitalize{
+	text-transform: capitalize;
+}
+
+a{
+	font-family: $font_garamond;
+	color: $black;
+	text-decoration: none;
+	font-weight: normal;
+	&:hover,&:active{
+		color: $black;
+	}
+}
+
+a.link-gold{
+	color: $gold;
+	transition: all 0.6s;
+	&:hover,&:active{
+		color: $gold-hover;
+	}
+}
+
+.vertical-middle{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.btn{
+	background-color: transparent;
+	padding: 10px 30px;
+	font-size: 18px;
+	line-height: 5;
+	border: 2px $white solid;
+}
+
+.btn-gold{
+	background-color: $gold;
+	color: $white;
+	height: auto;
+	transition: all 0.6s ease-out;
+	&:hover,&:active{
+		background-color: $gold-hover;
+		color: $white;
+		transition: all 0.6s ease-in;
+	}
+}
+
+.btn-gold-inverse{
+	background-color: transparent;
+	color: $gold;
+	height: auto;
+	border: 2px $gold solid;
+	transition: all 0.6s ease-out;
+	&:hover,&:active{
+		background-color: $gold;
+		color: $white;
+		border: 2px $gold solid;
+		transition: all 0.6s ease-in;
+	}
+}
+
+button{
+	font-family: $font_garamond;
+	border-radius: 0;
+	padding: 10px 20px;
+	font-size: 18px;
+	text-transform: capitalize;
+}
+
+input[type="submit"]{
+	font-family: $font_garamond;
+	border-radius: 0;
+	font-size: 18px;
+	text-transform: capitalize;
+	background-color: $gold;
+	color: $white;
+	height: auto;
+	line-height: 1.2;
+	transition: all 0.6s ease-out;
+	&:hover,&:active{
+		background-color: $gold-hover;
+		color: $white;
+		transition: all 0.6s ease-in;
+	}
+}
+
+ul{
+	list-style: disc outside;
+}
+li{
+	font-family: $font_calibri;
+}
+
+.carousel_hdr {
+    overflow: hidden;
+    position: relative;
+    cursor: default;
+}
+
+.content-flavor{
+	span{
+		font-family: $font_garamond;
+		font-size: 12px;
+		line-height: 1.2;
+		font-weight: 300;
+	}
+}
+
+.content-title{
+	span{
+		font-family: $font_garamond;
+		font-size: 30px;
+		line-height: 1.2;
+		font-weight: 300;
+	}
+}
+
+.content-desc{
+	span{
+		font-family: $font_garamond;
+		font-size: 20px;
+		line-height: 1.2;
+		font-weight: 300;
+	}
+}
+
+.content-calibre{
+	span{
+		font-family: $font_calibri;
+		font-size: 16px;
+		line-height: 1.2;
+		font-weight: normal;
+	}
+}
+
+.content-calibre-light{
+	span{
+		font-family: $font_calibri;
+		font-size: 16px;
+		line-height: 1.2;
+		font-weight: 100;
+		font-weight: 300;
+	}
+}
+
+.content-calibre-bold{
+	span{
+		font-family: $font_calibri;
+		font-size: 16px;
+		line-height: 1.2;
+		font-weight: bold;
+	}
+}
+
+@media(min-width: 1000px){
+	.content-flavor{
+		span{
+			font-size: 15px;
+			line-height: 1.2;
+		}
+	}
+
+	.content-title{
+		span{
+			font-size: 38px;
+			line-height: 1.2;
+			font-weight: 300;
+		}
+	}
+
+	.content-desc{
+		span{
+			font-size: 25px;
+			line-height: 1.2;
+			font-weight: 300;
+		}
+	}
+
+	.content-calibre{
+		span{
+			font-size: 18px;
+			line-height: 1.2;
+		}
+	}
+	.content-calibre-light{
+		span{
+			font-size: 18px;
+			line-height: 1.2;
+		}
+	}
+	.content-calibre-bold{
+		span{
+			font-size: 18px;
+			line-height: 1.2;
+		}
+	}
+}
+
+
+//global put the height to 500px;
+.img-bg-holder{
+	position: relative;
+	width: 100%;
+	height: 500px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.img-bg-parallax{
+	position: relative;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% 50%;
+}
+
+@media(min-width: 1600px){
+	.img-bg-parallax{
+	    background-size: 100% 50%;
+	}
+}
+
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+	.container{
+		min-width: 100%;
+		&.container-fluid{
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+	.container{
+		min-width: 100%;
+		&.container-fluid{
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+	.container{
+		min-width: 100%;
+		&.container-fluid{
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+	.container{
+		min-width: 100%;
+		&.container-fluid{
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+	.container{
+		min-width: 100%;
+		&.container-fluid{
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+}
+
+
+@media (min-width: 1400px) {
+	.container{
+		min-width: 100%;
+		&.container-fluid{
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		&.container-fix-hdpi{
+			padding-left: 4%;
+			padding-right: 4%;
+		}
+	}
+}
+
+@media (min-width: 1600px) {
+	.container{
+		min-width: 100%;
+		&.container-fluid{
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		&.container-fix-hdpi{
+			padding-left: 5%;
+			padding-right: 5%;
+		}
+	}
+}

@@ -1,0 +1,14 @@
+//- index.pug
+extends templates/default.pug
+
+block prepend title
+	- var title =  'Home'
+    
+block stylesheet
+	link(rel="stylesheet",  href="assets/css/partials/landing.css")
+	link(rel="stylesheet",  href="assets/css/partials/tripadvisor.css")
+block content
+	include templates/partial/landing.pug
+ 
+block javascript
+	script(src='assets/js/landing-page.js')

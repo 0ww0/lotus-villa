@@ -1,0 +1,644 @@
+@import 'globals/vars';
+
+	.book-room-container{
+		width: 100%;
+		padding: 0;
+		border: 0;
+	}
+	.room-book-wrapper{
+		position: relative;
+		display: block;
+		background-color: $bg-text;
+	}
+	.room-ico{
+		position: absolute;
+		z-index: 1;
+		width: 28px;
+		right: 2%;
+		top: 2%;
+		cursor: pointer;
+		.ico{
+			font-size: 24px;
+			color: $white;
+		}
+	}
+	.img-bg-holder{
+		background-color: $white;
+	}
+
+	.book-room-img-holder{
+		background-position: 50% 50%;
+		height: auto;
+		cursor: pointer;
+		&:before{
+			content: '';
+			padding-top: 55%;
+			display: table;
+		}
+	}
+	@media(min-width: 750px){
+		.book-room-img-holder{
+			height: auto;
+			&:before{
+				padding-top: 500px;
+			}
+		}
+	}
+
+	.room-feature-holder{
+		margin: 0 auto;
+		padding: 4% 6%;
+	}
+	@media (min-width: 1200px) {
+		.room-feature-holder{
+			max-height: 540px;
+			width: 500px;
+		}
+	}
+
+
+	.room-desc{
+		.content-title{
+			margin-bottom: 10px;
+			span{
+				font-size: 38px;
+				color: $white;
+			}
+		}
+	}
+
+
+	.room-icon{
+		position: relative;
+		padding: 0;
+		.second-line{
+			i.ico,.content-flavor{
+				height: 40px;
+				line-height: 0.5;
+			}
+		}
+		.icon-wrapper{
+			padding: 0 6%;
+			width: 88%;
+			margin: 0 auto;
+			.ico{
+				display: inline-block;
+				font-size: 14px;
+				color: $white;
+				vertical-align: middle;
+				width: 22px;
+				text-align: center;
+			}
+		}
+		.content-flavor{
+			display: inline-block;
+			span{
+				font-size: 14px;
+				color: $white;
+    			display: block;
+			}
+		}
+	}
+
+	@media (min-width: 550px){
+		.room-icon{
+			.icon-wrapper{
+				width: 84%;
+			}
+			.columns-fix.six-half{
+				width: 50%;
+				margin-left: 0;
+			}
+		}
+	}
+	@media (min-width: 750px){
+
+	}
+	@media (min-width: 1000px){
+		.room-icon{
+			.icon-wrapper{
+				padding: 0;
+				width: 220px;
+				.ico{
+					font-size: 16px;
+				}
+			}
+			.content-flavor{
+				span{
+					font-size: 16px;
+				}
+			}
+		}
+	}
+	@media (min-width: 1200px){
+		.room-icon{
+			.icon-wrapper{
+				padding: 0 5%;
+				width: 230px;
+			}
+		}
+	}
+
+	.ico-img-holder{
+		padding: 10px 0;
+	}
+
+	.booking-container-wrapper{
+		padding: 12.5% 6% 0;
+		height: auto;
+		.content-title{
+			span{
+				color: $black;
+			}
+		}
+	}
+	@media (min-width: 1000px){
+		.booking-container-wrapper{
+			height: auto;
+			&.fg-overide{
+				height: 540px;
+			}
+		}
+	}
+
+
+
+	.content-booking{
+		padding: 0;
+		margin-bottom: 20px;
+		span{
+			font-family: $font_calibri;
+			font-size: 18px;
+			color: #8a6b37;
+			line-height: 1.2;
+			&.currency{
+				font-family: $font_garamond;
+				font-size: 24px;
+			}
+		}
+	}
+	.book-icon-desc{
+		padding: 2% 0 3%;
+		height: 80px;
+		.ico-img-holder{
+			color: #666666;
+			.ico{
+				font-size: 35px;
+			}
+			span{
+				font-family: $font_calibri;
+			}
+		}
+	}
+	.book-content-desc{
+		padding: 0 0 0%;
+		.content-desc{
+			margin-bottom: 20px;
+			span{
+				color: $black;
+				font-family: $font_calibri;
+				font-size: 18px;
+			}
+		}
+	}
+
+	.book-system-wrapper{
+		display: block;
+		padding: 0% 6%;
+		@media(min-width: 1000px){
+			padding: 6%;
+		}
+		.form-container{
+			padding: 0;
+			.columns-fix.six-half{
+				width: 50%;
+			}
+			label{
+				font-family: $font_garamond;
+				font-size: 18px;
+			}
+			input[type='text']{
+				width: 100%;
+				border-radius: 0;
+				font-family: $font_calibri;
+				font-size: 16px;
+			}
+			.form-date{
+				position: relative;
+			}
+			.form-icon-holder{
+				position: absolute;
+				top: 42px;
+				right: 8px;
+				.ico{
+					color: #8a6b37;
+					font-size: 16px;
+				}
+			}
+			.night-wrapper{
+				font-family: $font_garamond;
+				padding: 0;
+				font-size: 16px;
+				text-align: center;
+				font-style: italic;
+			}
+			@media (min-width: 550px){
+				.night-wrapper{
+					padding: 36px 0 0;
+					font-size: 16px;
+				}
+			}
+			.form-number-holder{
+				button{
+					display: inline-block;
+					padding: 0 10px;
+				}
+				.ico{
+					font-size: 16px;
+					color: #8a6b37;
+				}
+				input[type='text']{
+					width: 40px;
+					text-align: center;
+					border: transparent;
+					background-color: transparent;
+					font-size: 16px;
+				}
+			}
+			@media (max-width: 360px){
+				.columns-fix.six-half{
+					width: 100%;
+				}
+			}
+			@media (min-width: 550px){
+				.columns.two{
+					margin-left: 0;
+				}
+				.columns{
+					margin-left: 4%;
+					&:first-child{
+						margin-left: 0;
+					}
+				}
+				.columns.five{
+					width: 39.3333333333%;
+				}
+				.columns.two{
+					width: 13.3333333333%;
+				}
+			}
+			@media (min-width: 1000px){
+
+				.columns-fix.two-half{
+					width: 18%;
+				}
+				.columns-fix.five-half{
+					width: 45%;
+				}
+			}
+			.form-radio-holder{
+				input[type='radio']{
+					display: inline-block;
+				}
+				label{
+					display: inline-block;
+					padding-left: 5px
+				}
+			}
+			.form-button-holder{
+				padding: 10% 0 0;
+				text-align: center;
+			}
+		}
+	}
+
+
+
+	.booking-terms-container{
+		background-color: $white;
+		.booking-terms-wrapper{
+			margin: 0 auto;
+			padding: 4% 6%;
+		}
+		@media(min-width: 1000px){
+			.booking-terms-wrapper{
+				width: 880px;
+				height: 100%;
+				padding: 4% 6%;
+			}
+		}
+		@media(min-width: 1200px){
+			.booking-terms-wrapper{
+				width: 1056px;
+				height: 100%;
+			}
+		}
+		.content-title{
+			margin-bottom: 20px;
+		}
+		.content-calibre{
+			margin-bottom: 5px;
+			span{
+				font-size: 20px;
+			}
+		}
+		ul.terms{
+			list-style: disc outside;
+			margin-top: 5px;
+			margin-left: 20px;
+			li{
+				font-family: $font_calibri;
+				font-weight: normal;
+				font-size: 14px;
+				padding-left: 0;
+				margin-bottom: 0;
+			}
+			@media(min-width: 1000px){
+				li{
+					font-size: 16px;
+					padding-left: 15px;
+				}
+			}
+		}
+	}
+
+	.lotus-room{
+		.room-table-desc{
+			position: relative;
+			padding: 4% 0;
+			margin: 0 auto;
+			table{
+				font-family: $font_garamond;
+				font-size: 14px;
+				color: $white;
+				margin-bottom: 0;
+				@media(min-width: 1000px){
+					font-size: 16px;
+				}
+				th,td{
+					padding: 5px 10px;
+					text-align: center;
+					border-bottom: 0;
+				}
+				th{
+					border: 1px $white solid;
+				}
+				th:nth-child(2){
+					border-right: 0;
+				}
+				th:nth-child(3){
+					border-left: 0;
+				}
+				td{
+					border-left: 1px $white solid;
+					border-right: 1px $white solid;
+				}
+				tr:nth-child(2){
+					border-bottom: 1px $white solid;
+				}
+				td:nth-child(2){
+					border-right: 0;
+				}
+				td:nth-child(3){
+					border-left: 0;
+				}
+			}
+		}
+
+		.lotus-bg-holder{
+			background-image:url(../../images/contents/pages/stay/room-lotus/bg.jpg);
+			height: auto;
+		}
+	}
+
+	.frangipani-room{
+		.room-table-desc{
+			position: relative;
+			padding: 4% 0;
+			margin: 0 auto;
+			table{
+				font-family: $font_garamond;
+				font-size: 14px;
+				color: $white;
+				margin-bottom: 0;
+				@media(min-width: 1000px){
+					font-size: 16px;
+				}
+				th,td{
+					padding: 5px 10px;
+					text-align: center;
+					border-bottom: 0;
+				}
+				th{
+					border: 1px $white solid;
+				}
+				th:nth-child(2){
+					border-right: 0;
+				}
+				th:nth-child(3){
+					border-left: 0;
+					border-right: 0
+				}
+				th:nth-child(4){
+					border-left: 0;
+				}
+				td{
+					border-left: 1px $white solid;
+					border-right: 1px $white solid;
+				}
+				tr:nth-child(2){
+					border-bottom: 1px $white solid;
+				}
+				td:nth-child(2){
+					border-right: 0;
+				}
+				td:nth-child(3){
+					border-left: 0;
+					border-top: 0;
+					border-right: 0;
+				}
+				td:nth-child(4){
+					border-left: 0;
+					border-top: 0;
+				}
+			}
+		}
+		.book-icon-desc{
+			height: 130px;
+		}
+		.frangipani-bg-holder{
+			background-image:url(../../images/contents/pages/stay/room-frangipani/bg.jpg);
+			height: auto;
+		}
+
+	}
+
+	.waterlily-room{
+		.room-table-desc{
+			position: relative;
+			padding: 4% 0;
+			margin: 0 auto;
+			table{
+				font-family: $font_garamond;
+				font-size: 14px;
+				color: $white;
+				margin-bottom: 0;
+				@media(min-width: 1000px){
+					font-size: 16px;
+				}
+				th,td{
+					padding: 5px 10px;
+					text-align: center;
+					border-bottom: 0;
+				}
+				th{
+					border: 1px $white solid;
+				}
+				th:nth-child(2){
+					border-right: 0;
+				}
+				th:nth-child(3){
+					border-left: 0;
+					border-right: 0
+				}
+				th:nth-child(4){
+					border-left: 0;
+				}
+				td{
+					border-left: 1px $white solid;
+					border-right: 1px $white solid;
+				}
+				tr:nth-child(2){
+					border-bottom: 1px $white solid;
+				}
+				td:nth-child(2){
+					border-right: 0;
+				}
+				td:nth-child(3){
+					border-left: 0;
+					border-top: 0;
+					border-right: 0;
+				}
+				td:nth-child(4){
+					border-left: 0;
+					border-top: 0;
+				}
+			}
+		}
+		.waterlily-bg-holder{
+			background-image:url(../../images/contents/pages/stay/room-waterlily/bg.jpg);
+			height: auto;
+		}
+	}
+
+	.orchid-room{
+		.room-table-desc{
+			position: relative;
+			padding: 4% 0;
+			margin: 0 auto;
+			table{
+				font-family: $font_garamond;
+				font-size: 14px;
+				color: $white;
+				margin-bottom: 0;
+				@media(min-width: 1000px){
+					font-size: 16px;
+				}
+				th,td{
+					padding: 5px 10px;
+					text-align: center;
+					border-bottom: 0;
+					@media(max-width: 320px){
+						padding: 5px 8px;
+					}
+				}
+				th{
+					border: 1px $white solid;
+				}
+				th:nth-child(2){
+					border-right: 0;
+				}
+				th:nth-child(3){
+					border-left: 0;
+					border-right: 0
+				}
+				th:nth-child(4){
+					border-left: 0;
+					border-right: 0;
+				}
+				th:nth-child(5){
+					border-left: 0;
+				}
+				td{
+					border-left: 1px $white solid;
+					border-right: 1px $white solid;
+				}
+				tr:nth-child(2){
+					border-bottom: 1px $white solid;
+				}
+				td:nth-child(2){
+					border-right: 0;
+				}
+				td:nth-child(3){
+					border-left: 0;
+					border-top: 0;
+					border-right: 0;
+				}
+				td:nth-child(4){
+					border-left: 0;
+					border-top: 0;
+					border-right: 0;
+				}
+				td:nth-child(5){
+					border-left: 0;
+					border-top: 0;
+				}
+			}
+		}
+		.orchid-bg-holder{
+			background-image:url(../../images/contents/pages/stay/room-orchid/bg.jpg);
+			height: auto;
+		}
+		@media( min-width: 1000px){
+			.room-table-desc{
+				padding: 5% 4% 0;
+			}
+		}
+		@media( min-width: 1200px){
+			.room-table-desc{
+				padding: 5% 2% 0;
+			}
+		}
+		@media( min-width: 1400px){
+			.room-table-desc{
+				padding: 5% 0% 0;
+			}
+		}
+	}
+
+	.slick-dots {
+	    width: 70%;
+	    text-align: left;
+	    bottom: 1%;
+	    position: absolute;
+	    margin: 0;
+	    padding: 0;
+	    left: 4%;
+	}
+
+	.slick-dots li button:before {
+	    content: '\e90b';
+	    font-size: 12px;
+	    display: block;
+	    background-color: transparent;
+	    color: $white;
+		padding: 0px 1px;
+	}
+
+	.slick-dots li.slick-active button:before {
+	    content: '\e90d';
+	    font-size: 24px;
+	    display: block;
+	    background-color: transparent;
+	    color: $white;
+	}

@@ -1,0 +1,536 @@
+// ------   @include  ------ //
+@mixin _hides {
+    display: none;
+}
+
+@mixin bg_cover{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+
+
+// ------  Shorthand  ------ //
+
+// ----  cover_background  -----//
+@mixin cover_background($img_uri) {
+    background: url($img_uri) repeat center center;
+}
+// -----  @include cover_background('#{$images}header_img/get_enlightened_poster.jpg');  --- //
+
+// ----  padding  -----//
+@mixin padding ($paddings...) {
+  padding: $paddings;
+}
+// -----  @include padding($f0 $f0 35%);  --- //
+
+// ----  margin  -----//
+@mixin margin ($margins...) {
+  margin: $margins;
+}
+// -----  @include margin($auto);  --- //
+
+// ----  border  -----//
+@mixin border($border) {
+    border: $border;
+}
+// -----  @include border(3px solid $grey);  --- //
+
+// ----  Border radius  -----//
+@mixin border_radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+}
+// -----  @include border_radius(50%);  --- //
+
+
+
+// ------  aplha / opacity  ------ //
+// ----  background aplha  -----//
+@mixin alpha_background_color($color) {
+    $percent: alpha($color) * 100%;
+    $opaque: opacify($color, 1);
+    $solid-color: mix($opaque, $color, $percent);
+    background: $solid-color;
+}
+// -----  @include alpha_background_color(rgba(#f2d06b, 0.5));  --- //
+
+// ----  color aplha  -----//
+@mixin alpha_color($color) {
+    $percent: alpha($color) * 100%;
+    $opaque: opacify($color, 1);
+    $solid-color: mix($opaque, $color, $percent);
+    color: $solid-color;
+}
+// -----  @include alpha_color(rgba(#f2d06b, 0.5));  --- //
+
+// ----  Cross browser opacity  -----//
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+// -----  @include opacity(0);  --- //
+
+
+
+// ------  transform  ------ //
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+// ----  rotate  -----//
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+// -----  @include rotate(45);  --- //
+ 
+// ----  scale  -----//
+@mixin scale($scale) {
+    @include transform(scale($scale));
+}
+// -----  @include scale(45);  --- //
+
+@mixin scaleY($scaleY) {
+    @include transform(scaleY($scaleY));
+}
+// -----  @include scaleY(45);  --- //
+
+// ----  translate  -----//
+@mixin translate ($x, $y) {
+    @include transform(translate($x, $y));
+}
+// -----  @include translate(-50%, -50%);  --- //
+
+// ----  translateY  -----//
+@mixin translateY ($y) {
+   @include transform(translateY($y));
+}
+// -----  @include translateY(-$p50);  --- //
+
+// ----  translateX  -----//
+@mixin translateX ($x) {
+   @include transform(translateX($x));
+}
+// -----  @include translateX(-$p50);  --- //
+
+
+// ----  skew  -----//
+@mixin skew ($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+// -----  @include skew(10, 9);  --- //
+
+// ----  transform origin  -----//
+@mixin transform_origin ($origin) {
+    moz-transform-origin: $origin;
+    -o-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+    transform-origin: $origin;
+}
+// -----  @include transform-origin(top left);  --- //
+
+// ----  translate 3d  -----//
+@mixin translate3d($translate-x: 0, $translate-y: 0, $translate-z: 0) {
+    -webkit-transform: translate3d($translate-x, $translate-y, $translate-z);
+    -ms-transform: translate3d($translate-x, $translate-y, $translate-z);
+    -o-transform: translate3d($translate-x, $translate-y, $translate-z);
+    transform: translate3d($translate-x, $translate-y, $translate-z);
+}
+// -----  @include translate3d(0,0,0);  --- //
+
+
+
+
+// ----  transition_button  -----//
+@mixin transition_button($props, $duration: $transition-duration, $easing: $transition-easing) {
+    @if(type-of($props) == list) {
+        transition: none $duration $easing;
+        transition-property: $props;
+    } @else {
+        transition: $props $duration $easing;
+    }
+}
+
+// Usage:
+//     - @include transition_button(width);
+//     - @include transition_button((width, height));
+//     - @include transition_button((width, height), 0.6s);
+//     - @include transition_button((width, height), 0.6s, $easeInQuad);
+//
+
+
+
+
+
+
+
+
+// ----  box-shadow  -----//
+@mixin box_shadow($top, $left, $blur, $color, $inset:"") {
+    -webkit-box-shadow:$top $left $blur $color #{$inset};
+    -moz-box-shadow:$top $left $blur $color #{$inset};
+    box-shadow:$top $left $blur $color #{$inset};
+}
+// -----  @include box_shadow(inset, 0, 1px, 1px, rgba(0, 0, 0, 0.5)); @include box_shadow(0, 1px, 1px, rgba(0, 0, 0, 0.5)); --- //
+
+
+
+
+
+
+
+
+// ------   Animations and keyframes  ------ //
+@mixin animation_name($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};      
+}
+
+
+@mixin animation_duration($duration...) {
+  -o-animation-duration: $duration;
+  -moz-animation-duration: $duration;
+  -webkit-animation-duration: $duration;
+  animation-duration: $duration;
+}
+
+@mixin animation_iteration_count($count...) {
+  -o-animation-iteration-count: $count;
+  -moz-animation-iteration-count: $count;
+  -webkit-animation-iteration-count: $count;
+  animation-iteration-count: $count;
+}
+
+@mixin animation_direction($direction...) {
+  -o-animation-direction: $direction;
+  -moz-animation-direction: $direction;
+  -webkit-animation-direction: $direction;
+  animation-direction: $direction;
+}
+
+@mixin animation_delay($delay...) {
+    -moz-animation-delay:    $delay;
+    -o-animation-delay:      $delay;
+    -ms-animation-delay:     $delay;
+    -webkit-animation-delay: $delay;
+    animation-delay:         $delay;
+}
+
+
+// @mixin animation-timing-function($timing...) {
+//   -o-animation-timing-function: $timing;
+//   -moz-animation-timing-function: $timing;
+//   -webkit-animation-timing-function: $timing;
+//   animation-timing-function: $timing;
+// }
+
+// @mixin animation-fill-mode($fill...) {
+//   -o-animation-fill-mode: $fill;
+//   -moz-animation-fill-mode: $fill;
+//   -webkit-animation-fill-mode: $fill;
+//   animation-fill-mode: $fill;
+// }
+
+// @mixin animation-play-state($state...) {
+//   -o-animation-play-state: $state;
+//   -moz-animation-play-state: $state;
+//   -webkit-animation-play-state: $state;
+//   animation-play-state: $state;
+// }
+
+
+
+@mixin keyframes($animation_name) {
+    @-webkit-keyframes #{$animation_name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation_name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation_name} {
+        @content;
+    }
+    @-o-keyframes #{$animation_name} {
+        @content;
+    }  
+    @keyframes #{$animation_name} {
+        @content;
+    }
+}
+
+
+
+// -----  @include animation('slide-down 5s 3');  --- //
+
+
+// -----  @include animation-name(bounce_circularG);  --- //
+// -----  @include animation-duration(0.908s);  --- //
+// -----  @include animation-iteration-count(infinite);  --- //
+// -----  @include animation-direction(normal);  --- //
+
+
+// @include keyframes(bounce_circularG) {
+//     0% { 
+//         @include scale(1);
+//     }
+
+//     100% { 
+//         @include scale(.3);
+//     }
+// }
+
+// @include keyframes(bounce) {
+//     0%, 20%, 50%, 80%, 100% {
+//         @include transform(translateY(0));
+//     }
+//     40% {
+//         @include transform(translateY(-25px));
+//     }
+//     60% {
+//         @include transform(translateY(-15px));
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+// ------  transition  ------ //
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+// -----  @include transition(all 500ms ease-in-out);  --- //
+
+@mixin transition_property($property...) {
+    -moz-transition-property:    $property;
+    -o-transition-property:      $property;
+    -webkit-transition-property: $property;
+    transition-property:         $property;
+}
+
+@mixin transition_duration($duration...) {
+    -moz-transition-property:    $duration;
+    -o-transition-property:      $duration;
+    -webkit-transition-property: $duration;
+    transition-property:         $duration;
+}
+
+@mixin transition_timing_function($timing...) {
+    -moz-transition-timing-function:    $timing;
+    -o-transition-timing-function:      $timing;
+    -webkit-transition-timing-function: $timing;
+    transition-timing-function:         $timing;
+}
+
+@mixin transition_delay($delay...) {
+    -moz-transition-delay:    $delay;
+    -o-transition-delay:      $delay;
+    -webkit-transition-delay: $delay;
+    transition-delay:         $delay;
+}
+
+// @include animation-name(scale, slide);
+// @include animation-duration(2s);
+// @include animation-timing-function(ease);
+// @include animation-iteration-count(infinite);
+
+
+
+// ------  gradient  ------ //
+@mixin linear_gradient($from, $to, $direction: 'vertical') {
+    @if $direction == 'vertical' {
+        background: $from; /* Old browsers */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$from), color-stop(30%,$to)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  $from 0%,$to 30%); /* Chrome10+,Safari5.1+ */
+        background: -moz-linear-gradient(top,  $from 0%, $to 30%); /* FF3.6+ */
+        background: -ms-linear-gradient(top, $from 0%, $to 30%);
+        background: -o-linear-gradient(top,  $from 0%,$to 30%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  $from 0%,$to 30%); /* IE10+ */
+        background: linear-gradient(to bottom,  $from 0%,$to 30%); /* W3C */
+        // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($from)}', endColorstr='#{ie-hex-str($to)}', GradientType=0); /* IE6-9 */
+    } @else if $direction == 'horizontal' {
+        background: $from; /* Old browsers */
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%,$from), color-stop(30%,$to)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(left,  $from 0%,$to 30%); /* Chrome10+,Safari5.1+ */
+        background: -moz-linear-gradient(left,  $from 0%, $to 30%); /* FF3.6+ */
+        background: -ms-linear-gradient(left, $from 0%, $to 30%);
+        background: -o-linear-gradient(left,  $from 0%,$to 30%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(left,  $from 0%,$to 30%); /* IE10+ */
+        background: linear-gradient(to right,  $from 0%,$to 30%); /* W3C */
+        // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($from)}', endColorstr='#{ie-hex-str($to)}', GradientType=0); /* IE6-9 */
+    }
+}
+
+
+
+
+// ------  media query  ------ //
+@mixin mq($breakpoint) {
+    @if $breakpoint == xs480 {
+        @media #{$mq-xs480} { @content; }
+    }
+    @else if $breakpoint == xs481 {
+        @media #{$mq-xs481} { @content; }
+    }
+    @else if $breakpoint == xs500 {
+        @media #{$mq-xs500} { @content; }
+    }
+    @else if $breakpoint == xs640 {
+        @media #{$mq-xs640} { @content; }
+    }
+    @else if $breakpoint == sm641min {
+        @media #{$mq-sm641min} { @content; }
+    }
+    @else if $breakpoint == xs {
+        @media #{$mq-xs} { @content; }
+    }
+    @else if $breakpoint == sm768min {
+        @media #{$mq-sm768min} { @content; }
+    }
+    @else if $breakpoint == sm {
+        @media #{$mq-sm} { @content; }
+    }
+    @else if $breakpoint == sm989 {
+        @media #{$mq-sm989} { @content; }
+    }
+    @else if $breakpoint == sm991min {
+        @media #{$mq-sm991min} { @content; }
+    }
+    @else if $breakpoint == sm991 {
+        @media #{$mq-sm991} { @content; }
+    }
+    @else if $breakpoint == sm992min {
+        @media #{$mq-sm992min} { @content; }
+    }
+    @else if $breakpoint == md {
+        @media #{$mq-md}  { @content; }
+    }
+    @else if $breakpoint == md1199 {
+        @media #{$mq-md1199}  { @content; }
+    }
+    @else if $breakpoint == lg {
+        @media #{$mq-lg}  { @content; }
+    }
+}
+// -----  @include mq(sm992min);  --- //
+
+
+
+
+
+
+
+
+
+// ------  placeholder  ------ //
+@mixin input-placeholder($color) {
+  &.placeholder {
+    color: $color; 
+    }
+  &:-moz-placeholder {
+    color: $color; 
+    }
+  &::-webkit-input-placeholder {
+    color: $color; 
+    } 
+}
+// -----  @include input-placeholder($yellow);  --- //
+
+
+
+
+// ------  SVG background images with PNG and retina fallback  ------ //
+$image-path: '../img' !default;
+$fallback-extension: 'png' !default;
+$retina-suffix: '@2x';
+
+@mixin background-image($name, $size:false){
+    background-image: url(#{$image-path}/#{$name}.svg);
+    @if($size){
+        background-size: $size;
+    }
+    .no-svg &{
+        background-image: url(#{$image-path}/#{$name}.#{$fallback-extension});
+
+        @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+          background-image: url(#{$image-path}/#{$name}#{$retina-suffix}.#{$fallback-extension});
+        }
+    }
+}
+// -----  @include background-image('pattern');  --- //
+
+
+
+
+
+
+
+
+
+
+
+// ------  Icon Font  ------ //
+@mixin fontello_icon_font {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+// ----- @include fontello_icon_font(); content: $icon-icon-minus;  --- //
+
+
+
+
+
+
+
+
+
+
+
+// ------  ellipsis Fonts  ------ //
+@mixin ellipsis(){
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    width: 100%;
+}
+
+// ------    @include ellipsis();  ---------//
+

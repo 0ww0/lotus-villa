@@ -1,0 +1,369 @@
+header{
+	font-family: $font_garamond;
+	&.site-header{
+		position: relative;
+		background-color: $white;
+	}
+	&.navbar-fixed-top{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		border-width: 0 0 1px;
+		z-index: 32;
+	}
+	//Nav start
+
+	nav{
+		position: relative;
+		min-height: 50px;
+	}
+	.navbar{
+		border: 0;
+    	margin-bottom: 0;
+    	border-radius: 0;
+    	&.brand-hero{
+    		position: relative;
+    		width: 100%;
+    	}
+    	&.brand-menu{
+    		display: none;
+    		width: 100%;
+    		height: 100%;
+    		position: fixed;
+    		border: 0;
+    		left: 0;
+    		background-color: $primary;
+    		&.open{
+    			display: block;
+    		}
+    	}
+	}
+
+	@media (min-width: 1000px) {
+		.navbar{
+			&.brand-hero{
+				float: left;
+				width: 31.5%;
+			}
+	    	&.brand-menu{
+	    		float: right;
+	    		display: block;
+	    		width: 68.5%;
+	    		height: 100%;
+	    		position: relative;
+	    		background-color: $white;
+	    	}
+		}
+	}
+
+
+	.hamburger-holder{
+		position: absolute;
+		display: block;
+		right: 0;
+		top: 0;
+		width: 60px;
+		background-color: $primary;
+		.hamburger-menu{
+			display: block;
+			padding: 16.5px 0;
+			.line{
+				width: 50%;
+				 height: 3px;
+				 background-color: #ecf0f1;
+				 display: block;
+				 margin: 9.5px auto;
+				 transition: all 0.3s ease-in-out;
+			}
+			&.open{
+				.line:nth-child(2){
+				  opacity: 0;
+				}
+				.line:nth-child(1){
+				  transform: translateY(13px) rotate(45deg);
+				}
+				.line:nth-child(3){
+				  transform: translateY(-13px) rotate(-45deg);
+				}
+
+			}
+		}
+	}
+
+	@media (min-width: 1000px) {
+		.hamburger-holder{
+			display: none;
+		}
+	}
+
+
+	.brand-hero-holder{
+		width: 340px;
+		display: block;
+		height: 80px;
+		.brand-logo{
+			height: 80px;
+			width: 100%;
+			margin-left: 15px;
+			background-color: transparent;
+			background-image: url(../images/ui/logos/lotus-villa-mobile.png);
+			background-size: contain;
+			background-position: left;
+		}
+		@media(min-width: 550px){
+			.brand-logo{
+
+				background-image: url(../images/ui/logos/lotus-villa-desktop.png);
+			}
+		}
+
+		@media(min-width: 1000px){
+			.brand-logo{
+				background-size: contain;
+			}
+		}
+		@media(min-width: 1200px){
+			.brand-logo{
+				background-size: auto;
+			}
+		}
+	}
+
+	@media (max-width: 375px){
+		.brand-hero-holder{
+			width: 245px;
+			.brand-name{
+				width: 200px;
+				padding: 6% 0 0 10px;
+				.cutout{
+					display: block;
+				}
+			}
+		}
+	}
+	@media(min-width: 1000px){
+		.brand-hero-holder{
+			width: 315px;
+		}
+	}
+	@media(min-width: 1200px){
+		.brand-hero-holder{
+			width: 340px;
+		}
+	}
+	.menu-list {
+    	padding: 5% 0;
+	}
+	ul.menu{
+		list-style: none;
+		margin: 0;
+		li.menubar-list{
+			width: 90%;
+			margin: 0 auto;
+			&.open >  .dropdown-menu{
+
+					display: block;
+			}
+			a.menubar-link{
+				display: block;
+				padding: 15px 20px;
+				color: $white;
+				font-size: 18px;
+				border-bottom: 1px #aa8e5b solid;
+				&.special{
+					border: 2px $white solid;
+					display: block;
+					margin: 25px auto 0;
+					text-align: center;
+					&:hover,&.active,&:focus{
+						background-color: $gold;
+					}
+				}
+			}
+			@media(min-width: 1000px){
+				a.menubar-link{
+					color: $gold;
+					border-bottom: 0;
+					&.special{
+						border: 2px $gold solid;
+					}
+				}
+			}
+			&.active{
+				a.menubar-link{
+					background-color:  $gold;
+					color: $white;
+				}
+			}
+		}
+	}
+	li.menubar-list.js-dropdown-trigger{
+		position: relative;
+		&:after{
+			content: '\ea1c';
+			font-family: $font_lotus;
+			position: absolute;
+			display: block;
+			right: 15px;
+			top: 15px;
+			transform: rotate(90deg);
+			color: $white;
+		}
+		&.open:after{
+			transform: rotate(270deg);
+		}
+	}
+
+	ul.dropdown-menu{
+		display: none;
+		width: 100%;
+		list-style: none;
+		text-align: center;
+		margin: 0 auto;
+		background-color: $secondary;
+		&.open{
+			display: block;
+		}
+		li.drop-list{
+			a.drop-link{
+				display: block;
+				width: 100%;
+				padding: 15px 0;
+				color: $white;
+				font-size: 16px;
+				&:hover,&:active{
+					background-color: $gold;
+				}
+			}
+		}
+	}
+
+	@media (min-width: 1000px) {
+		.menu-list {
+	    	padding: 0;
+		}
+		ul.menu{
+			margin-right: 15px;
+			text-align: right;
+			padding: 0;
+			li.menubar-list{
+				display: inline-block;
+    			border: 0;
+    			margin: 0 3px;
+				position: relative;
+				width: auto;
+				&:first-child{
+					margin-left: 0;
+				}
+				&:last-child{
+					margin-right: 0;
+				}
+				&.open{
+					a.menubar-link{
+						background-color: $primary;
+						color: $white;
+					}
+				}
+    			a.menubar-link{
+    				min-width: 60px;
+    				padding: 27.5px 5px;
+    				display: block;
+    				text-align: center;
+					border-bottom: 0;
+					background-color: transparent;
+					transition: background-color .2s ease-out;
+					&.special{
+						border: 2px $primary solid;
+						padding: 5.5px 0;
+						width: 95px;
+						margin: 0;
+						transition: all 0.6s ease-out;
+					}
+					&:hover,&:focus{
+						background-color: $primary;
+						color: $white;
+						transition: background-color .2s ease-in;
+					}
+    			}
+			}
+		}
+		li.menubar-list.js-dropdown-trigger{
+			position: relative;
+			&:after{
+				content: '';
+			}
+		}
+		ul.dropdown-menu{
+			width: 200px;
+			display: none;
+			list-style: none;
+			text-align: center;
+			margin: 0 auto;
+			background-color: $primary;
+			position: absolute;
+			top: 100%;
+			left: -66px;
+
+			&.open{
+				display: block;
+			}
+			li.drop-list{
+				display: block;
+				margin-bottom: 0;
+				a.drop-link{
+					display: block;
+					width: 100%;
+					padding: 15px 0;
+					color: $white;
+					font-size: 16px;
+				}
+			}
+		}
+
+	}
+
+	/* Larger than Desktop HD */
+	@media (min-width: 1200px) {
+		ul.menu{
+			li.menubar-list{
+				margin: 0 5px;
+				a.menubar-link{
+					padding: 27.5px 15px;
+				}
+			}
+			ul.dropdown-menu{
+				left: -55px;
+
+			}
+		}
+	}
+	@media (min-width: 1400px) {
+		ul.menu{
+			li.menubar-list{
+				margin: 0 10px;
+				&:first-child{
+					margin-left: 10px;
+				}
+				&:last-child{
+					margin-right: 10px;
+				}
+				a.menubar-link{
+					padding: 27.5px 15px;
+				}
+			}
+			ul.dropdown-menu{
+				left: -55px;
+
+			}
+		}
+	}
+	@media (min-width: 1600px) {
+		ul.menu{
+			ul.dropdown-menu{
+				left: -53px;
+
+			}
+		}
+	}
+}

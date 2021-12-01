@@ -1,0 +1,36 @@
+include ../component/_mixin.pug
+block active
+	- var selected = ''
+
+header.site-header.navbar-fixed-top
+	nav
+		.container.container-fluid.container-fix-hdpi
+			.navbar.brand-hero
+				.hamburger-holder
+					a.hamburger-menu.mobile-nav.js-hamburger-menu(href="javascript:void(0);" onclick='return false')
+						span.line
+						span.line
+						span.line
+						span.sr-only Toggle Navigation
+				a.brand-hero-holder(href='../index.html')
+					.img-bg-holder.brand-logo
+					.brand-name.sr-only
+						span Lotus Villa #[span.cutout Boutique Hotel]
+			.navbar.brand-menu.js-menu-navigation
+				.menu-list
+					ul.menu
+						+nav-item('#','js-dropdown-trigger', 'Stay', 'dropdown-toggle', 'dropdown')
+							ul.dropdown-menu.js-dropdown-menu
+								+nav-dropdown('../stay/lotus-room.html', 'Lotus Room')
+								+nav-dropdown('../stay/frangipani-room.html', 'Frangipani Room')
+								+nav-dropdown('../stay/waterlily-room.html', 'Water Lily Room')
+								+nav-dropdown('../stay/orchid-suite.html', 'Orchid Suite')
+						+nav-item('../services.html','', 'Services')
+						+nav-item('../discover-luang-prabang.html','', 'Discover Luang Prabang', '')
+						+nav-item('#','js-dropdown-trigger', 'About Us', 'dropdown-toggle','dropdown')
+							ul.dropdown-menu.js-dropdown-menu
+								+nav-dropdown('../about-us/lotus-villa.html', 'Lotus Villa')
+								+nav-dropdown('../about-us/philanthropy.html', 'Philanthropy')
+						+nav-item('../get-in-touch.html','', 'Get In Touch', '')
+						+nav-item('../book.html','', 'Book', 'special')
+						

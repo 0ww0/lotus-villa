@@ -1,0 +1,18 @@
+//- index.pug
+extends templates/default.pug
+
+block active
+	- var selected = 'Get In Touch'
+
+block prepend title
+	- var title = 'Get In Touch'
+
+block stylesheet
+	link(rel="stylesheet",  href="assets/css/partials/get-in-touch.css")
+
+block content
+	include templates/partial/get-in-touch.pug
+ 
+block javascript
+	script(src='assets/js/external_plugin/jquery.validate.js')
+	script(src='assets/js/get-in-touch.js')

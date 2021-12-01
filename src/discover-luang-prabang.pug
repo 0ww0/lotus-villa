@@ -1,0 +1,16 @@
+//- index.pug
+extends templates/default.pug
+
+block active
+	- var selected = 'Discover Luang Prabang'
+
+block prepend title
+	- var title = 'Discover Luang Prabang'
+    
+block stylesheet
+	link(rel="stylesheet",  href="assets/css/partials/discover-luang-prabang.css")
+block content
+	include templates/partial/discover.pug
+ 
+block javascript
+	

@@ -1,0 +1,269 @@
+@import '../globals/vars';
+
+
+.philanthropy-container{
+	width: 100%;
+	padding: 0;
+	border: 0;
+	.carousel-wrapper{
+		height: auto;
+		background-size: cover;
+		&:before{
+			content: '';
+			padding-top: 55%;
+			display: table;
+		}
+	}
+	@media (max-width: 999px){
+		.img-bg-parallax{
+			background-position: 72% center !important;
+		}
+	}
+	@media (min-width: 1000px) {
+		.carousel-wrapper{
+			height: auto;
+			background-attachment: fixed;
+			background-size: 1920px 350px;
+			background-position: 50% 80px;
+			&:before{
+				padding-top: 350px;
+			}
+		}
+	}
+	.hero-header{
+		background-color: $bg-text;
+		color: $white;
+		padding: 4% 6%;
+		opacity: 0.85;
+		.content-title{
+			margin-bottom: 5px;
+		}
+		.content-desc{
+			margin-bottom: 5px;
+		}
+	}
+	@media (min-width: 1000px) {
+		.hero-header{
+			background-color: transparent;
+			padding: 0;
+			color: $black;
+			&.hero-wrapper{
+				position: absolute;
+				top: 36%;
+				width: 100%;
+			}
+		}
+	}
+}
+
+.community-laos-container{
+	background-color: $white;
+	.community-wrapper{
+		padding: 8% 6%;
+		@media(min-width: 1000px){
+			padding: 3.5% 0%;
+		}
+		@media(min-width: 1200px){
+			width: 1200px;
+			margin: 0 auto;
+
+		}
+		.content-title{
+			margin-bottom: 15px;
+			padding: 0;
+			@media(min-width: 1000px){
+				padding: 0% 15%;
+			}
+		}
+		span{
+			color: #a28553;
+			line-height: 0.8;
+		}
+		.content-calibre{
+			padding: 0;
+			@media(min-width: 1000px){
+				padding: 0% 15%;
+			}
+			span{
+				font-weight: 300;
+			}
+		}
+	}
+}
+
+.philanthropy-tabs-container{
+	position: relative;
+	width: 100%;
+	background-color: #29363e;
+	.philanthropy-tabs-wrapper{
+		margin: 0 auto;
+		padding: 10% 6% 20%;
+		@media (min-width: 750px){
+			padding: 5% 6% 15%;
+		}
+		@media (min-width: 1000px){
+			width: 880px;
+			height: 100%;
+			padding: 4% 0;
+		}
+		@media(min-width: 1200px){
+			width: 1100px;
+		}
+	}
+	span.text{
+		font-size: 18px;
+	}
+	@media(max-width: 320px){
+		span.text{
+			white-space: pre-line;
+			display: block;
+			padding: 0 25px;
+		}
+	}
+}
+@media(max-width: 320px){
+    .tabs-holder{
+        ul.tabs{
+            li.tabs-list{
+                &.next > a,
+                &.prev > a {
+                    padding: 28px 0;
+                }
+            }
+        }
+    }
+}
+.tabs-container{
+    .tabs-img-holder{
+        height: 100%;
+        padding: 3% 0;
+        img{
+			margin: 0 auto;
+			display: block;
+            width: 100%;
+        }
+    }
+	@media(min-width: 750px){
+		.tabs-img-holder{
+			img{
+				width: auto;
+			}
+		}
+	}
+	@media (min-width: 1000px){
+		.tabs-img-holder{
+			height: 350px;
+			img{
+				width: 90%;
+				margin: 0;
+				margin-right: auto;
+			}
+		}
+	}
+	@media (min-width: 1200px){
+		.tabs-img-holder{
+			height: 350px;
+			img{
+				width: auto;
+				margin: 0;
+				margin-right: auto;
+	        }
+		}
+	}
+	.projects-desc{
+		height: auto;
+		padding: 3% 0;
+		.content-calibre-light{
+			margin-bottom: 15px;
+			padding: 1% 0;
+        }
+
+		span{
+			font-family: $font_calibri;
+			font-weight: 300;
+            color: $white;
+		}
+		a{
+			font-family: $font_calibri;
+			font-weight: 300;
+			font-size: 18px;
+		}
+	}
+    .tabs-desc{
+        height: auto;
+        padding: 3% 0;
+        span{
+			font-family: $font_calibri;
+			font-weight: 300;
+            color: $white;
+        }
+		a{
+			font-family: $font_calibri;
+			font-weight: 300;
+		}
+		.content-title{
+			margin-bottom: 20px;
+			span{
+				font-family: $font_garamond;
+			}
+		}
+        .content-calibre-light{
+			margin-bottom: 15px;
+        }
+        ul.desc{
+            list-style: disc outside;
+            margin-left: 20px;
+            color: $white;
+            li.desc-list{
+				font-family: $font_calibri;
+				font-size: 16px;
+				padding-left: 20px;
+                margin-bottom: 0;
+				font-weight: 300;
+            }
+        }
+    }
+	@media (min-width: 1000px){
+		.tabs-desc{
+			height: auto;
+			ul.desc{
+
+	            li.desc-list{
+
+					font-size: 18px;
+
+	            }
+	        }
+		}
+	}
+}
+.tabs-disclamer{
+    padding: 2% 0 0;
+    color: $white;
+}
+
+.slick-dots {
+    width: 70%;
+    text-align: left;
+    bottom: 1%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 4%;
+}
+
+.slick-dots li button:before {
+    content: '\e90b';
+    font-size: 12px;
+    display: block;
+    background-color: transparent;
+    color: $white;
+}
+
+.slick-dots li.slick-active button:before {
+    content: '\e90d';
+    font-size: 24px;
+    display: block;
+    background-color: transparent;
+    color: $white;
+}

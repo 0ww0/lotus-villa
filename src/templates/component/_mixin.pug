@@ -1,0 +1,14 @@
+mixin nav-item(href, jshelper, title, special, datatoggle)
+    if selected === title
+        li(class=['active menubar-list', jshelper])
+            a(class=['menubar-link',special] href=href data-toggle=datatoggle) #{title}
+            block
+    else
+        li(class=['menubar-list', jshelper])
+            a(class=['menubar-link',special] data-toggle=datatoggle href=href) #{title}
+            block
+        
+                
+mixin nav-dropdown(href, name)
+    li.drop-list
+        a.drop-link(href=href) #{name}

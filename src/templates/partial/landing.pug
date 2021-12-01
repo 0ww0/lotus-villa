@@ -1,0 +1,146 @@
+- assetImage = 'assets/images/contents/pages/'
+
+
+
+	.section.container.carousel-container
+		.carousel.carousel_hdr
+			.carousel_item
+				.img-bg-parallax.carousel-wrapper(style='background-image: url(assets/images/contents/pages/landing/banners/carousel/banner_1.jpg)')
+
+		.hero-header.hero-wrapper.txt-center
+			.content-title
+				span Your Journey Begins Here
+			.content-desc
+				span Discover yourself as you take in the sights, sounds, and flavours of Luang Prabang
+			a.btn.btn-gold(href="book.html") Book Your Room
+
+	.section.container.subscribe-container
+		.row
+			.columns.four
+				.subscribe-wrapper
+					.subscribe-desc.txt-center
+						a(href='review.html') Review Your Booking
+			.columns.eight
+				.subscribe-wrapper
+					.tripadvisor-image.txt-center
+						.row
+							.columns.three
+								.trip-img-holder.trip-01
+									img(src=assetImage + "trip-advisor/tripad-icon-01.png", alt="")
+							.columns.four
+								.trip-img-holder.trip-02
+									img(src=assetImage + "trip-advisor/tripad-icon-02.png", alt="")
+							.columns.five
+								.trip-img-holder.trip-03
+									img(src=assetImage + "trip-advisor/tripad-icon-03.png", alt="")
+
+	.section.container.philanthropy-container
+		.row
+			.columns.twelve
+				.philanthropy-wrapper
+					.img-bg-holder.phil-bg-holder
+					.phil-desc
+						.content-flavor
+							span #[strong Philanthropy]
+						.content-title
+							span We Are Community Builders
+						.content-desc
+							span Putting a smile on every child, and laughter in every home.
+						a.btn.btn-gold(href="about-us/philanthropy.html") Our Philanthropy
+
+
+	.section.container.about-us-container
+		.row
+			.columns.twelve
+				.about-us-wrapper
+					.img-bg-holder.about-us-bg-holder
+						.about-us-desc
+							.row
+								.columns.six
+									.content-title
+										span Experience tranquillity like no other
+									a.btn.btn-gold(href="about-us/lotus-villa.html") Learn More
+								.columns.six
+									.content-calibre-light
+										span Set along a quiet street, Lotus Villa is a boutique hotel with 17 individually crafted rooms and suites in the heart of a UNESCO peninsula.
+									.content-calibre-light
+										span We strive to bring you the best of both worlds by combining the warmth and intimacy of traditional Lao houses with the exquisiteness of French colonial designs.
+	
+
+	include ../component/_tripadvisor.pug
+	+tripadvisor('background-image: url(assets/images/contents/pages/trip-advisor/trip-luang-prabang.png);', 
+	'World-class indulgence, natural wonders, and spiritual awakenings – experience it all in the heart of Laos', 'discover-luang-prabang.html',
+	'Discover Luang Prabang')
+
+
+	.section.container.stay-with-us-container
+		.stay-desc
+			.content-title.rm-margin.txt-center
+				span Stay With Us
+		.stay-wrapper
+			.row
+				.columns.six
+					.room-container.lotus-room
+						.img-bg-holder.room-img-holder
+							img(src=assetImage + "landing/banners-rooms/rooms/01-lotus.jpg", alt="")
+							a.btn.btn-gold(href="book.html") Book Now
+						.img-bg-holder.room-bg-holder
+							.room-desc
+								.room-title
+									span Lotus Room
+								.room-bed
+									span Queen / Twin Bed
+								.room-tenant
+									span Two Guests
+								.room-sq
+									span 204 sq ft
+
+				.columns.six
+					.room-container.frangipani-room
+						.img-bg-holder.room-img-holder
+							img(src=assetImage + "landing/banners-rooms/rooms/02-frangipani.jpg", alt="")
+							a.btn.btn-gold(href="book.html") Book Now
+						.img-bg-holder.room-bg-holder
+							.room-desc
+								.room-title
+									span Frangipani Room
+								.room-bed
+									span King / Twin Bed
+								.room-tenant
+									span Two Guests
+								.room-sq
+									span 161 sq ft
+				.columns.six
+					.room-container.waterlily-room
+						.img-bg-holder.room-img-holder
+							img(src=assetImage + "landing/banners-rooms/rooms/03-waterlily.jpg", alt="")
+							a.btn.btn-gold(href="book.html") Book Now
+						.img-bg-holder.room-bg-holder
+							.room-desc
+								.room-title
+									span Water Lily Room
+								.room-bed
+									span 1 King Bed. Extra bed available upon request
+								.room-tenant
+									span Three Guests
+								.room-sq
+									span 258 sq ft
+				.columns.six
+					.room-container.orchid-room
+						.img-bg-holder.room-img-holder
+							img(src=assetImage + "landing/banners-rooms/rooms/04-orchid.jpg", alt="")
+							a.btn.btn-gold(href="book.html") Book Now
+						.img-bg-holder.room-bg-holder
+							.room-desc
+								.room-title
+									span Orchid Suite
+								.room-bed
+									span 1 King Bed and 2 Twin Beds
+								.room-tenant
+									span Four Guests
+								.room-sq
+									span 538 sq ft
+
+	
+		
+					

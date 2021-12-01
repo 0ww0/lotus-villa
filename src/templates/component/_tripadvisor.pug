@@ -1,0 +1,12 @@
+mixin tripadvisor(bg, desc, href, btnName)
+	.section.container.tripadvisor-container
+			.tripadvisor-wrapper
+				.tripdavisor-container.img-bg-holder.trip-img-holder(style = bg)
+					.trip-desc.txt-center.vertical-middle
+						.content-title
+							span #{desc}
+						a.btn.btn-gold(href= href) #{btnName}
+				.tripdavisor-container
+					.trip-icon-holder
+						img(src=assetImage + "trip-advisor/tripadvisor-logo.png", alt="")
+					include _trip-carousel.pug

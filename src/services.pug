@@ -1,0 +1,15 @@
+//- index.pug
+extends templates/default.pug
+
+block active
+	- var selected = 'Services'
+
+block prepend title
+	- var title = 'Services' 
+    
+block stylesheet
+	link(rel="stylesheet",  href="assets/css/partials/services.css")
+block content
+	include templates/partial/service.pug
+ 
+block javascript

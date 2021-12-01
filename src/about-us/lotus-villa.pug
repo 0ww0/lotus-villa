@@ -1,0 +1,22 @@
+//- index.pug
+extends ../templates/fdefault.pug
+
+block active
+	- var selected = 'About Us'
+
+block prepend title
+	- var title = 'Lotus Villa'
+    
+block stylesheet
+	link(rel="stylesheet",  href="../assets/css/partials/tripadvisor.css")
+	link(rel="stylesheet",  href="../assets/css/partials/about-us/lotus-villa.css")
+
+block content
+	include ../templates/partial/about-us/lotus.pug
+	include ../templates/component/_tripadvisor.pug
+	+tripadvisor('background-image: url(../assets/images/contents/pages/trip-advisor/stay-with-us.jpg);', 
+	'Experience Luang Prabang\'s charm and wonder with us today', '../stay/lotus-room.html',
+	'Book Your Room')
+ 
+block javascript
+	script(src='../assets/js/about-us/lotus-villa.js')

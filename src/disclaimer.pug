@@ -1,0 +1,16 @@
+//- index.pug
+extends templates/default.pug
+
+block active
+	- var selected = 'Disclaimer'
+
+block prepend title
+	- var title = 'Disclaimer'
+		
+block stylesheet
+	link(rel="stylesheet",  href="assets/css/partials/disclaimer.css")
+
+block content
+	include templates/partial/disclaimer.pug
+ 
+block javascript
